@@ -1,11 +1,10 @@
 FROM node:4.4.7
 
-RUN mkdir -p /src/app
-WORKDIR /src/app
-
-COPY app/package.json /src/app/package.json
+RUN mkdir -p /src
+COPY . /src
+WORKDIR /src
 RUN npm install
 
 EXPOSE 3000
 
-CMD ["node", "/src/app/app.js"]
+CMD ["node", "/src/app.js"]

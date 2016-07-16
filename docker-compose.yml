@@ -2,4 +2,3 @@ app:
   build: .
   volumes:
     - ./app:/src/app
-    - /src/app/node_modules
